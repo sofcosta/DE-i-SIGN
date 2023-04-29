@@ -16,6 +16,8 @@
  * FirebaseUI initialization to be used in a Single Page application context.
  */
 
+var current_user;
+
 /**
  * @return {!Object} The FirebaseUI config.
  */
@@ -131,6 +133,8 @@ var signInWithPopup = function() {
  * @param {!firebase.User} user
  */
 var handleSignedInUser = function(user) {
+  current_user = user;
+
   document.getElementById('user-signed-in').style.display = 'block';
   document.getElementById('user-signed-out').style.display = 'none';
   document.getElementById('name').textContent = user.displayName;
@@ -151,6 +155,9 @@ var handleSignedInUser = function(user) {
   } else {
     document.getElementById('photo').style.display = 'none';
   }
+
+  dynamicallyLoadScript('./create_submission.js');
+  dynamicallyLoadScript('./all_submissions.js');
 };
 
 
@@ -158,6 +165,7 @@ var handleSignedInUser = function(user) {
  * Displays the UI for a signed out user.
  */
 var handleSignedOutUser = function() {
+  current_user = null;
   document.getElementById('user-signed-in').style.display = 'none';
   document.getElementById('user-signed-out').style.display = 'block';
   ui.start('#firebaseui-container', getUiConfig());
@@ -214,6 +222,11 @@ function handleConfigChange() {
   ui.start('#firebaseui-container', getUiConfig());
 }
 
+function dynamicallyLoadScript(url) {
+  var script = document.createElement("script");  // create a script DOM node
+  script.src = url;  // set its src to the provided URL
+  document.body.appendChild(script);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
+}
 
 /**
  * Initializes the app.
