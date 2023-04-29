@@ -17,5 +17,4 @@ function build_all_submissions_page(submissions) {
         document.body.appendChild(sub_desc);
         document.body.appendChild(sub_media);
     }
-
 }

@@ -47,17 +47,17 @@ function getUiConfig() {
         // Required to enable ID token credentials for this provider.
         clientId: CLIENT_ID
       },
-      {
-        provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-        scopes :[
-          'public_profile',
-          'email',
-          'user_likes',
-          'user_friends'
-        ]
-      },
-      firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-      firebase.auth.GithubAuthProvider.PROVIDER_ID,
+      // {
+      //   provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      //   scopes :[
+      //     'public_profile',
+      //     'email',
+      //     'user_likes',
+      //     'user_friends'
+      //   ]
+      // },
+      // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+      // firebase.auth.GithubAuthProvider.PROVIDER_ID,
       {
         provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
         // Whether the display name should be displayed in Sign Up page.
@@ -67,20 +67,20 @@ function getUiConfig() {
           status: getDisableSignUpStatus()
         }
       },
-      {
-        provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-        recaptchaParameters: {
-          size: getRecaptchaMode()
-        },
-      },
-      {
-        provider: 'microsoft.com',
-        loginHintKey: 'login_hint'
-      },
-      {
-        provider: 'apple.com',
-      },
-      firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
+      // {
+      //   provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+      //   recaptchaParameters: {
+      //     size: getRecaptchaMode()
+      //   },
+      // },
+      // {
+      //   provider: 'microsoft.com',
+      //   loginHintKey: 'login_hint'
+      // },
+      // {
+      //   provider: 'apple.com',
+      // },
+      // firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
     ],
     // Terms of service url.
     'tosUrl': 'https://www.google.com',
@@ -139,7 +139,7 @@ var handleSignedInUser = function(user) {
   document.getElementById('user-signed-out').style.display = 'none';
   document.getElementById('name').textContent = user.displayName;
   document.getElementById('email').textContent = user.email;
-  document.getElementById('phone').textContent = user.phoneNumber;
+  // document.getElementById('phone').textContent = user.phoneNumber;
   if (user.photoURL) {
     var photoURL = user.photoURL;
     // Append size to the photo URL for Google hosted images to avoid requesting
@@ -179,23 +179,23 @@ firebase.auth().onAuthStateChanged(function(user) {
   user ? handleSignedInUser(user) : handleSignedOutUser();
 });
 
-/**
- * Deletes the user's account.
- */
-var deleteAccount = function() {
-  firebase.auth().currentUser.delete().catch(function(error) {
-    if (error.code == 'auth/requires-recent-login') {
-      // The user's credential is too old. She needs to sign in again.
-      firebase.auth().signOut().then(function() {
-        // The timeout allows the message to be displayed after the UI has
-        // changed to the signed out state.
-        setTimeout(function() {
-          alert('Please sign in again to delete your account.');
-        }, 1);
-      });
-    }
-  });
-};
+// /**
+//  * Deletes the user's account.
+//  */
+// var deleteAccount = function() {
+//   firebase.auth().currentUser.delete().catch(function(error) {
+//     if (error.code == 'auth/requires-recent-login') {
+//       // The user's credential is too old. She needs to sign in again.
+//       firebase.auth().signOut().then(function() {
+//         // The timeout allows the message to be displayed after the UI has
+//         // changed to the signed out state.
+//         setTimeout(function() {
+//           alert('Please sign in again to delete your account.');
+//         }, 1);
+//       });
+//     }
+//   });
+// };
 
 
 /**

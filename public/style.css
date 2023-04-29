@@ -1,15 +1,55 @@
+:root {
+  --blue: #00B0FF;
+  --darkblue: #fafafa;
+  --white: #fafafa;
+  --black: #10223E;
+  --red: #DF0909;
+}
+
+h1 {
+  font-size: 32;
+  text-transform: capitalize;
+  font-family: DM Sans;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+h2 {
+  font-size: 24;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 16;
+  text-transform: capitalize;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0em;
+}
+
+p {
+  font-size: 14;
+}
+
 * {
   box-sizing: border-box;
+  font-family: DM Sans;
+
 }
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 #container {
   max-width: 600px;
   margin: 0 auto;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .clearfix {
