@@ -159,10 +159,11 @@ var handleSignedInUser = function (user) {
   // }
 
   document.getElementById('all_submissions_page').style.display = "initial";
+  document.getElementById('single_submission_page').style.display = "none";
   document.getElementById('create_submission_page').style.display = "none";
   document.getElementById('user_info_page').style.display = "none";
 
-  console.log("handleSignedInUser");
+  //console.log("handleSignedInUser");
 
   dynamicallyLoadScript('./create_submission.js');
   dynamicallyLoadScript('./all_submissions.js');
