@@ -1,6 +1,7 @@
 :root {
   --blue: #00B0FF;
   --darkblue: #007DB5;
+  --lightblue: #ECF3FF;
   /* --white: #fafafa; */
   --white: white;
   --black: #10223E;
@@ -119,6 +120,11 @@ body {
 /* PC */
 
 
+.round {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+}
 
 button {
   background-color: var(--blue);
@@ -132,7 +138,6 @@ button {
   margin: 4px 2px;
   cursor: pointer;
   gap: 170px;
-  border-radius: 6px;
 }
 .nav_submit_btn{
   background-color: var(--white);
@@ -158,4 +163,12 @@ button#sign-out {
 #user_name:hover {
   font-weight: bold;
 
+}
+
+.padding_title_content {
+  padding: 32px 0 24px 0;
+}
+
+.hidden {
+  display: none;
 }

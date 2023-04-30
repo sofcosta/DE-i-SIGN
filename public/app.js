@@ -113,6 +113,13 @@ function getWidgetUrl() {
     getAdminRestrictedOperationStatus();
 }
 
+function sub(obj) {
+  var file = obj.value;
+  var fileName = file.split("\\");
+  document.getElementById("yourBtn").innerHTML = fileName[fileName.length - 1];
+  document.myForm.submit();
+  e.preventDefault();
+}
 
 /**
  * Redirects to the FirebaseUI widget.
@@ -165,6 +172,7 @@ var handleSignedInUser = function (user) {
   console.log("handleSignedInUser");
 
   dynamicallyLoadScript('./create_submission.js');
+  dynamicallyLoadScript('./get_file.js');
   dynamicallyLoadScript('./all_submissions.js');
 };
 
