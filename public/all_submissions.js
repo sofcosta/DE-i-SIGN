@@ -2,7 +2,7 @@
 function build_all_submissions_page(submissions) {
     let all_submissions_container = document.getElementById('all_submissions_container');
     let submission_containers = document.getElementsByClassName('single_sub');
-    //submission_containers.innerHTML = "";
+    submission_containers.innerHTML = "";
     //console.log(submissions);
     for (sub of submissions) {
         // console.log(sub);
