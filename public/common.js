@@ -86,11 +86,19 @@ function show_current_theme_dropdown() {
 function show_all_submissions_page() {
   document.getElementById('create_submission_page').style.display = "none";
   document.getElementById('all_submissions_page').style.display = "initial";
+  document.getElementById('single_submission_page').style.display = "none";
+}
+
+function show_single_submission_page() {
+  document.getElementById('create_submission_page').style.display = "none";
+  document.getElementById('all_submissions_page').style.display = "none";
+  document.getElementById('single_submission_page').style.display = "initial";
 }
 
 function show_create_submissions_page() {
   document.getElementById('create_submission_page').style.display = "initial";
   document.getElementById('all_submissions_page').style.display = "none";
+  document.getElementById('single_submission_page').style.display = "none";
 }
 
 // User Signed out
