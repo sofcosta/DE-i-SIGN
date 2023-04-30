@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>FirebaseUI Auth Demo</title>
+  <title>De(i)sign</title>
   <link rel="manifest" href="manifest.json">
   <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
@@ -11,7 +11,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-storage-compat.js"></script>
   <script src="config.js"></script>
   <script src="common.js"></script>
-  <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="./css/style.css" rel="stylesheet" type="text/css" media="screen" />
   <script src="https://www.gstatic.com/firebasejs/ui/6.0.2/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.2/firebase-ui-auth.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,7 +33,7 @@
           <nav>
             <!-- <button id="show_all_submissions_page_btn" class="nav-link active" onclick="show_all_submissions_page()"><i
                 class="bi bi-house"></i> All Submissions</button> -->
-            <button id="show_create_submissions_page_btn" class="nav-link active"
+            <button id="show_create_submissions_page_btn " class="nav-link active nav_submit_btn"
               onclick="show_create_submissions_page()"><i class="bi bi-house"></i> Submit</button>
           </nav>
           <main id="user_info_page">
@@ -54,7 +54,9 @@
           </main>
           <!-- * ALL SUBMISSIONS PAGE * -->
           <main id="all_submissions_page">
-            <div id="current_theme_dropdown" style="background-color: aqua;">
+            <button id="sign-out">Sign Out</button>
+
+            <div id="current_theme_dropdown"">
               <div id="current_theme_dropdown_btn" onclick="show_current_theme_dropdown()">
                 <h3>Current Theme</h3>
                 <h2>This is the theme title</h2>
@@ -73,14 +75,22 @@
           </main>
           <!-- * CREATE SUBMISSION PAGE * -->
           <main id="create_submission_page">
-            <form action="">
+            <button id="sign-out">Sign Out</button>
 
-              <input type="text" name="" id="submissionTitle_input">
-              <input type="text" name="" id="submissionDescription_input">
-              <input type="text" name="" id="submissionTheme_input">
-              <input type="file" name="" id="submissionFile_input">
-              <button id="create_submission_button" type="button">Submit</button>
-            </form>
+            <div class="container">
+
+            </div>
+              <div class="container_upload">
+                <form action="" method="post">
+
+                <input type="text" name="" id="submissionTitle_input">
+                <input type="text" name="" id="submissionDescription_input">
+                <input type="text" name="" id="submissionTheme_input">
+                <input type="file" name="" id="submissionFile_input">
+                <button id="create_submission_button" type="button">Submit</button>
+              </form>
+              </div>
+             
           </main>
         </div>
         <!-- * USER SIGNED OUT * -->
@@ -98,8 +108,9 @@
           <main id="login_page">
             <div id="firebaseui-spa">
               <h2>Hello!</h2>
-              <p>Login with your institutional email and participate in our contests.</p>
+              <p>Login with your (institutional) email and participate in our contests.</p>
               <div id="firebaseui-container"></div>
+              
             </div>
           </main>
           <!-- <fieldset>

@@ -1,7 +1,8 @@
 :root {
   --blue: #00B0FF;
-  --darkblue: #fafafa;
-  --white: #fafafa;
+  --darkblue: #007DB5;
+  /* --white: #fafafa; */
+  --white: white;
   --black: #10223E;
   --red: #DF0909;
 }
@@ -14,7 +15,6 @@ h1 {
   line-height: 31px;
   letter-spacing: 0em;
   text-align: left;
-
 }
 
 h2 {
@@ -37,7 +37,7 @@ p {
 * {
   box-sizing: border-box;
   font-family: DM Sans;
-
+  /* background-color: var(--white); */
 }
 
 body {
@@ -84,6 +84,7 @@ body {
 }
 
 @media (max-width: 300px) {
+
   #photo-container,
   #photo {
     height: 40px;
@@ -92,10 +93,69 @@ body {
 }
 
 .arrow_down {
+  text-align: right;
   border: solid var(--blue);
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+
+/* Current theme  */
+#current_theme_dropdown_btn {
+  border-top: solid 1px var(--blue);
+  border-bottom: solid 1px var(--blue);
+  width: 100%;
+}
+
+#current_theme_dropdown_content {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 16px 36px;
+}
+
+/* BUTTONS */
+/* PC */
+
+
+
+button {
+  background-color: var(--blue);
+  border: none;
+  color: var(--white);
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  gap: 170px;
+  border-radius: 6px;
+}
+.nav_submit_btn{
+  background-color: var(--white);
+  padding: 8px 32px;
+  border: solid 1px var(--blue);
+  color: var(--blue);
+}
+.nav_submit_btn:hover{
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+#login_register_btn:hover {
+  background-color: var(--darkblue);
+}
+
+button#sign-out {
+  color: var(--blue);
+  background-color: var(--white);
+}
+
+#sign-out:hover,
+#user_name:hover {
+  font-weight: bold;
+
 }

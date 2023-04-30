@@ -247,9 +247,9 @@ var initApp = function () {
   // document.getElementById('sign-in-with-popup').addEventListener(
   //   'click', signInWithPopup);
  
-  // document.getElementById('sign-out').addEventListener('click', function () {
-  //   firebase.auth().signOut();
-  // });
+  document.getElementById('sign-out').addEventListener('click', function () {
+    firebase.auth().signOut();
+  });
 
   document.getElementById('login_register_btn').addEventListener('click', function () {
     document.getElementById('firebaseui-spa').style.display = "initial";
