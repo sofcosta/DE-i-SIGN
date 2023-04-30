@@ -91,3 +91,12 @@ body {
     width: 40px;
   }
 }
+
+.arrow_down {
+  border: solid var(--blue);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}

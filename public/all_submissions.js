@@ -1,3 +1,5 @@
+let all_submissions_container = document.getElementById('all_submissions_container');
+
 function build_all_submissions_page(submissions) {
 
     for (sub of submissions) {
@@ -13,8 +15,8 @@ function build_all_submissions_page(submissions) {
         sub_media.width = 100;
         sub_media.src = sub.submissionMedia;
 
-        document.body.appendChild(sub_title);
-        document.body.appendChild(sub_desc);
-        document.body.appendChild(sub_media);
+        all_submissions_container.appendChild(sub_title);
+        all_submissions_container.appendChild(sub_desc);
+        all_submissions_container.appendChild(sub_media);
     }
 }

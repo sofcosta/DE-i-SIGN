@@ -74,3 +74,27 @@ function parseQueryString(queryString) {
   }
   return config;
 }
+
+
+
+function show_current_theme_dropdown() {
+  document.getElementById('current_theme_dropdown_content').classList.toggle('hidden');
+}
+
+
+// Show pages and hide other pages
+function show_all_submissions_page() {
+  document.getElementById('create_submission_page').style.display = "none";
+  document.getElementById('all_submissions_page').style.display = "initial";
+}
+
+function show_create_submissions_page() {
+  document.getElementById('create_submission_page').style.display = "initial";
+  document.getElementById('all_submissions_page').style.display = "none";
+}
+
+// User Signed out
+function show_login_page() {
+  document.getElementById('welcome_page').style.display = "none";
+  document.getElementById('login_page').style.display = "initial";
+}

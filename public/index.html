@@ -18,45 +18,91 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" type="text/css" href="./all_submissions/all_submissions.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div id="container">
-    <h1>Login</h1>
+    <h1>Logo</h1>
     <div id="loading">Loading...</div>
     <div id="loaded" class="hidden">
       <div id="main">
+        <!-- * USER SIGNED IN * -->
         <div id="user-signed-in" class="hidden">
-          <div id="user-info">
-            <div id="photo-container">
-              <img id="photo">
+          <nav>
+            <!-- <button id="show_all_submissions_page_btn" class="nav-link active" onclick="show_all_submissions_page()"><i
+                class="bi bi-house"></i> All Submissions</button> -->
+            <button id="show_create_submissions_page_btn" class="nav-link active"
+              onclick="show_create_submissions_page()"><i class="bi bi-house"></i> Submit</button>
+          </nav>
+          <main id="user_info_page">
+            <div id="user-info">
+              <div id="photo-container">
+                <img id="photo">
+              </div>
+              <div id="name"></div>
+              <div id="email"></div>
+              <div id="phone"></div>
+              <div id="is-new-user"></div>
+              <div class="clearfix"></div>
             </div>
-            <div id="name"></div>
-            <div id="email"></div>
-            <div id="phone"></div>
-            <div id="is-new-user"></div>
-            <div class="clearfix"></div>
-          </div>
+            <!-- <p>
+              <button id="sign-out">Sign Out</button>
+              <button id="delete-account">Delete account</button>
+            </p> -->
+          </main>
+          <!-- * ALL SUBMISSIONS PAGE * -->
+          <main id="all_submissions_page">
+            <div id="current_theme_dropdown" style="background-color: aqua;">
+              <div id="current_theme_dropdown_btn" onclick="show_current_theme_dropdown()">
+                <h5>Current Theme</h5>
+                <h4>This is the theme title</h4>
+                <div class="arrow_down"></div>
+              </div>
+              <div id="current_theme_dropdown_content" class="hidden">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </div>
+            </div>
+            <h4>All Projects</h4>
+            <div id="all_submissions_container"></div>
+          </main>
+          <!-- * CREATE SUBMISSION PAGE * -->
+          <main id="create_submission_page">
+            <form action="">
 
-          <p>
-            <button id="sign-out">Sign Out</button>
-            <button id="delete-account">Delete account</button>
-          </p>
-
-          <form action="">
-
-            <input type="text" name="" id="submissionTitle_input">
-            <input type="text" name="" id="submissionDescription_input">
-            <input type="text" name="" id="submissionTheme_input">
-            <input type="file" name="" id="submissionFile_input">
-            <button id="create_submission_button" type="button">Create submission</button>
-          </form>
+              <input type="text" name="" id="submissionTitle_input">
+              <input type="text" name="" id="submissionDescription_input">
+              <input type="text" name="" id="submissionTheme_input">
+              <input type="file" name="" id="submissionFile_input">
+              <button id="create_submission_button" type="button">Submit</button>
+            </form>
+          </main>
         </div>
+        <!-- * USER SIGNED OUT * -->
         <div id="user-signed-out" class="hidden">
-          <h4>You are signed out.</h4>
-          <fieldset>
+          <!-- * WELCOME PAGE * -->
+          <main id="welcome_page">
+            <h4>Welcome!</h4>
+            <p>DE(I)SIGN is a project developed
+              to bring together all of the DEI community where you can upload your projects and vote for your favorites!
+            </p>
+
+            <button id="login_register_btn" onclick="show_login_page()">Login</button>
+          </main>
+          <!-- * LOG IN PAGE * -->
+          <main id="login_page">
+            <div id="firebaseui-spa">
+              <h4>Hello!</h4>
+              <p>Login with your institutional email and participate in our contests.</p>
+              <div id="firebaseui-container"></div>
+            </div>
+          </main>
+          <!-- <fieldset>
             <legend>Configuration</legend>
             reCAPTCHA mode for Phone Auth:
             <label for="recaptcha-normal">
@@ -84,11 +130,8 @@
           <p>
             <button id="sign-in-with-redirect">Sign In with Redirect</button>
             <button id="sign-in-with-popup">Sign In with Popup</button>
-          </p>
-          <div id="firebaseui-spa">
-            <h5>Single Page Application mode:</h5>
-            <div id="firebaseui-container"></div>
-          </div>
+          </p> -->
+
         </div>
       </div>
     </div>
