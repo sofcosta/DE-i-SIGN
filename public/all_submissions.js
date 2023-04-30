@@ -6,7 +6,7 @@ function build_all_submissions_page(submissions) {
         // console.log(sub);
         // console.log(sub.submissionTitle);
 
-        let sub_title = document.createElement('h6');
+        let sub_title = document.createElement('h3');
         sub_title.appendChild(document.createTextNode(sub.submissionTitle));
         let sub_desc = document.createElement('p');
         sub_desc.className = 'submission_description';
