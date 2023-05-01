@@ -150,7 +150,7 @@ button {
   color: var(--white);
 }
 
-#login_register_btn:hover {
+#login_register_btn:hover, #create_submission_button:hover {
   background-color: var(--darkblue);
 }
 
