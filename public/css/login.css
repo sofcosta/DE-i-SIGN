@@ -1,0 +1,18 @@
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 4px solid #10223E;
+}
+
+.container div{
+    margin-bottom: 2%;
+}
+
+input{
+    margin-bottom: 100px;
+}
+
+/*como tirar um estilo quando seleciona input?*/
