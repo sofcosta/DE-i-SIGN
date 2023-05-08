@@ -36,8 +36,8 @@
           <nav>
             <!-- <button id="show_all_submissions_page_btn" class="nav-link active" onclick="show_all_submissions_page()"><i
                 class="bi bi-house"></i> All Submissions</button> -->
-            <button id="show_create_submissions_page_btn " class="nav-link active nav_submit_btn round"
-              onclick="show_create_submissions_page()"><i class="bi bi-house"></i> Submit</button>
+            <!-- <button id="show_create_submissions_page_btn " class="nav-link active nav_submit_btn round"
+              onclick="show_create_submissions_page()"><i class="bi bi-house"></i> Submit</button> -->
           </nav>
           <main id="user_info_page">
             <div id="user-info">
@@ -57,6 +57,8 @@
           </main>
           <!-- * ALL SUBMISSIONS PAGE * -->
           <main id="all_submissions_page">
+            <button id="show_create_submissions_page_btn " class="nav-link active nav_submit_btn round"
+              onclick="show_create_submissions_page()"><i class="bi bi-house"></i> Submit</button>
             <button id="sign-out" class="round">Sign Out</button>
             <div id="current_theme_dropdown">
               <div id="current_theme_dropdown_btn" onclick="show_current_theme_dropdown()">
@@ -76,7 +78,10 @@
             <div id="all_submissions_container"></div>
           </main>
           <!-- * SINGLE SUBMISSION PAGE * -->
+          
           <main id="single_submission_page">
+            <button id="show_create_submissions_page_btn " class="nav-link active nav_submit_btn round"
+              onclick="show_create_submissions_page()"><i class="bi bi-house"></i> Submit</button>
             <button id="sign-out" class="round">Sign Out</button>
             <button id="back" onclick=show_all_submissions_page()>Back</button>
             <button id="report">Report</button>

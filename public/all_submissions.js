@@ -15,7 +15,7 @@ function build_all_submissions_page(submissions) {
         sub_desc.className = 'submission_description';
         sub_desc.appendChild(document.createTextNode(sub.submissionDescription));
         let sub_media = document.createElement('img');
-        sub_media.width = 100;
+        sub_media.width = 200;
         sub_media.src = sub.submissionMedia;
 
         submission_container.appendChild(sub_title);
@@ -45,7 +45,7 @@ function build_all_submissions_page(submissions) {
             sub_desc.className = 'submission_description';
             sub_desc.appendChild(document.createTextNode(thisSub.submissionDescription));
             let sub_media = document.createElement('img');
-            sub_media.width = 100;
+            sub_media.width = 350;
             sub_media.src = thisSub.submissionMedia;
 
             let vote_slider = document.createElement('input');

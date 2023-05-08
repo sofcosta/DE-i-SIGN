@@ -20,7 +20,8 @@ body {
 }
 
 .logo {
-  padding-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 #container {
@@ -61,7 +62,6 @@ body {
   width: 80px;
 }
 
-
 h1 {
   font-size: 32px;
   text-transform: capitalize;
@@ -90,12 +90,16 @@ p {
 }
 
 
-@media (max-width: 300px) {
+@media (max-width: 480px) {
 
   #photo-container,
   #photo {
     height: 40px;
     width: 40px;
+  }
+
+  #container {
+    margin: auto 30px;
   }
 }
 
@@ -161,6 +165,8 @@ button {
 button#sign-out {
   color: var(--blue);
   background-color: var(--white);
+  position: absolute;
+  right: 60px;
 }
 
 #sign-out:hover,
@@ -191,5 +197,5 @@ button#sign-out {
 
 }
 .single_sub {
-  
+
 }

@@ -10,9 +10,10 @@
 }
 
 .container_upload {
-  width: 50%;
+  /*width: 50%;
   max-width: 333px;
-  min-width: 200px;
+  min-width: 200px;*/
+  width: 300px;
 
   justify-content: center;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.18);
