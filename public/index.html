@@ -25,7 +25,9 @@
 
 <body>
   <div id="container">
-    <h1>Logo</h1>
+    <div class="logo">
+      <img src="assets/logo_horizontal.svg" alt="logo">
+  </div>
     <div id="loading">Loading...</div>
     <div id="loaded" class="hidden">
       <div id="main">
@@ -56,7 +58,6 @@
           <!-- * ALL SUBMISSIONS PAGE * -->
           <main id="all_submissions_page">
             <button id="sign-out" class="round">Sign Out</button>
-
             <div id="current_theme_dropdown">
               <div id="current_theme_dropdown_btn" onclick="show_current_theme_dropdown()">
                 <h3>Current Theme</h3>
@@ -80,15 +81,13 @@
             <button id="back" onclick=show_all_submissions_page()>Back</button>
             <button id="report">Report</button>
             <div id="single_submission_container">
-
             </div>
           </main>
           <!-- * CREATE SUBMISSION PAGE * -->
           <main id="create_submission_page">
             <button id="sign-out">Sign Out</button>
-
+            <button id="back" onclick=show_all_submissions_page()>Back</button>
             <div class="container">
-
               <!-- <h1 class="title">Submit new project</h1> -->
               <div class="container_upload padding_elemets">
                 <h1 class="title">Submit new project</h1>
@@ -120,21 +119,14 @@
                     <input type="text" name="" id="submissionTheme_input" placeholder="Memories">
                     <!-- <label class="upload_file">Attatch Project</label> -->
                   </div>
-                 
-
                   <button id="create_submission_button" type="button" class="round margin32">Submit</button>
                 </form>
                 <div class="uploadImage_container">
                   <img src="" alt="" class="uploadImage">
                 </div>
               </div>
-
-
-            
             </div>
           </main>
-
-
         </div>
         <!-- * USER SIGNED OUT * -->
         <div id="user-signed-out" class="hidden">
@@ -144,7 +136,6 @@
             <p>DE(I)SIGN is a project developed
               to bring together all of the DEI community where you can upload your projects and vote for your favorites!
             </p>
-
             <button id="login_register_btn" onclick="show_login_page()" class="round">Login</button>
           </main>
           <!-- * LOG IN PAGE * -->
@@ -153,7 +144,6 @@
               <h2>Hello!</h2>
               <p>Login with your (institutional) email and participate in our contests.</p>
               <div id="firebaseui-container"></div>
-
             </div>
           </main>
           <!-- <fieldset>
@@ -185,7 +175,6 @@
             <button id="sign-in-with-redirect">Sign In with Redirect</button>
             <button id="sign-in-with-popup">Sign In with Popup</button>
           </p> -->
-
         </div>
       </div>
     </div>
@@ -194,5 +183,4 @@
   <script src="app.js"></script>
   <script src="getFile_upload_state.js"></script>
 </body>
-
 </html>
