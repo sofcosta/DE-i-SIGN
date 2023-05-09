@@ -53,7 +53,7 @@ function build_all_submissions_page(submissions) {
             let vote_slider = document.querySelector('input#voteSlider');
 
             let vote_submit = document.querySelector('button#voteSubmit');
-            vote_submit.appendChild(document.createTextNode('Vote'));
+            //vote_submit.appendChild(document.createTextNode('Vote'));
             vote_submit.onclick = function () {
                 console.log(thisSub.submissionScore);
                 firebase_app.firestore().collection('submissions').doc(id).update({
