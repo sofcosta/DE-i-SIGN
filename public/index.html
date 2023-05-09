@@ -27,7 +27,7 @@
   <div id="container">
     <div class="logo">
       <img src="assets/logo_horizontal.svg" alt="logo">
-  </div>
+    </div>
     <div id="loading">Loading...</div>
     <div id="loaded" class="hidden">
       <div id="main">
@@ -57,9 +57,11 @@
           </main>
           <!-- * ALL SUBMISSIONS PAGE * -->
           <main id="all_submissions_page">
-            <button id="show_create_submissions_page_btn " class="nav-link active nav_submit_btn round"
-              onclick="show_create_submissions_page()"><i class="bi bi-house"></i> Submit</button>
-            <button id="sign-out" class="round">Sign Out</button>
+            <div id="buttons_div">
+              <button id="show_create_submissions_page_btn " class="nav-link active nav_submit_btn round"
+                onclick="show_create_submissions_page()"><i class="bi bi-house"></i> Submit</button>
+              <button id="sign-out" class="round">Sign Out</button>
+            </div>
             <div id="current_theme_dropdown">
               <div id="current_theme_dropdown_btn" onclick="show_current_theme_dropdown()">
                 <h3>Current Theme</h3>
@@ -78,20 +80,42 @@
             <div id="all_submissions_container"></div>
           </main>
           <!-- * SINGLE SUBMISSION PAGE * -->
-          
           <main id="single_submission_page">
-            <button id="show_create_submissions_page_btn " class="nav-link active nav_submit_btn round"
-              onclick="show_create_submissions_page()"><i class="bi bi-house"></i> Submit</button>
-            <button id="sign-out" class="round">Sign Out</button>
-            <button id="back" onclick=show_all_submissions_page()>Back</button>
-            <button id="report">Report</button>
-            <div id="single_submission_container">
+
+            <div id="buttons_div">
+              <button id="show_create_submissions_page_btn " class="nav-link active nav_submit_btn round"
+                onclick="show_create_submissions_page()"><i class="bi bi-house"></i> Submit</button>
+              <!-- <button id="sign-out" class="round">Sign Out</button> -->
+            </div>
+            <div id="single_sub_buttons_div">
+              <div>
+                <div class="arrow_left"></div>
+                <button id="back" onclick=show_all_submissions_page()>BACK</button>
+              </div>
+              <button id="report">REPORT</button>
+            </div>
+            <div style="width: 350px;">
+              <div id="single_submission_container">
+
+              </div>
+              <div id="voting">
+                <div>
+                  <img src="assets/odeio.png">
+                  <input id="voteSlider" type="range" min="0" max="100">
+                  <img src="assets/adoro.png">
+                </div>
+                <div>
+                  <p>ODEIO</p>
+                  <p>ADORO</p>
+                </div>
+                <button id="voteSubmit"></button>
+              </div>
             </div>
           </main>
           <!-- * CREATE SUBMISSION PAGE * -->
           <main id="create_submission_page">
-            <button id="sign-out">Sign Out</button>
-            <button id="back" onclick=show_all_submissions_page()>Back</button>
+            <!-- <button id="sign-out">Sign Out</button> -->
+            <button id="back" onclick=show_all_submissions_page()>BACK</button>
             <div class="container">
               <!-- <h1 class="title">Submit new project</h1> -->
               <div class="container_upload padding_elemets">
@@ -119,7 +143,7 @@
                     <input type="text" name="" id="submissionDescription_input" placeholder="This project portrays..."">
                   </div>
 
-                  <div class="upload_container upload_theme"> <!-- padding_title_content -->
+                  <div class=" upload_container upload_theme"> <!-- padding_title_content -->
                     <label class="upload_theme">Theme</label>
                     <input type="text" name="" id="submissionTheme_input" placeholder="Memories">
                     <!-- <label class="upload_file">Attatch Project</label> -->
@@ -188,4 +212,5 @@
   <script src="app.js"></script>
   <script src="getFile_upload_state.js"></script>
 </body>
+
 </html>

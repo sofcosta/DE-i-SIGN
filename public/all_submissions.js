@@ -39,8 +39,10 @@ function build_all_submissions_page(submissions) {
             submission_container.className = "single_sub";
             submission_container.id = sub.submissionId;
 
-            let sub_title = document.createElement('h3');
+            let sub_title = document.createElement('h2');
             sub_title.appendChild(document.createTextNode(thisSub.submissionTitle));
+            let sub_author = document.createElement('h3');
+            sub_author.appendChild(document.createTextNode(thisSub.authorName));
             let sub_desc = document.createElement('p');
             sub_desc.className = 'submission_description';
             sub_desc.appendChild(document.createTextNode(thisSub.submissionDescription));
@@ -48,12 +50,9 @@ function build_all_submissions_page(submissions) {
             sub_media.width = 350;
             sub_media.src = thisSub.submissionMedia;
 
-            let vote_slider = document.createElement('input');
-            vote_slider.type = 'range';
-            vote_slider.min = '0';
-            vote_slider.max = '100';
+            let vote_slider = document.querySelector('input#voteSlider');
 
-            let vote_submit = document.createElement('button');
+            let vote_submit = document.querySelector('button#voteSubmit');
             vote_submit.appendChild(document.createTextNode('Vote'));
             vote_submit.onclick = function () {
                 console.log(thisSub.submissionScore);
@@ -67,9 +66,10 @@ function build_all_submissions_page(submissions) {
 
             submission_container.appendChild(sub_media);
             submission_container.appendChild(sub_title);
+            submission_container.appendChild(sub_author);
             submission_container.appendChild(sub_desc);
-            submission_container.appendChild(vote_slider);
-            submission_container.appendChild(vote_submit);
+            //submission_container.appendChild(vote_slider);
+            //submission_container.appendChild(vote_submit);
 
 
             single_submission_container.innerHTML = "";

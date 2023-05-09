@@ -20,7 +20,8 @@ body {
 }
 
 .logo {
-  padding-top: 20px;
+  position: absolute;
+  /* padding-top: 20px; */
   padding-bottom: 10px;
 }
 
@@ -28,6 +29,8 @@ body {
   max-width: 1320px;
   margin: auto 80px;
   /* text-align: center; */
+  position: relative;
+  padding-top: 20px;
 }
 
 .clearfix {
@@ -113,6 +116,16 @@ p {
   -webkit-transform: rotate(45deg);
 }
 
+.arrow_left {
+  text-align: right;
+  border: solid var(--black);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
 /* Current theme  */
 #current_theme_dropdown_btn {
   border-top: solid 1px var(--blue);
@@ -147,37 +160,60 @@ button {
   cursor: pointer;
   gap: 170px;
 }
-.nav_submit_btn{
+
+.nav_submit_btn {
   background-color: var(--white);
   padding: 8px 32px;
   border: solid 1px var(--blue);
   color: var(--blue);
 }
-.nav_submit_btn:hover{
+
+.nav_submit_btn:hover {
   background-color: var(--blue);
   color: var(--white);
 }
 
-#login_register_btn:hover, #create_submission_button:hover {
+#login_register_btn:hover,
+#create_submission_button:hover {
   background-color: var(--darkblue);
 }
 
 button#sign-out {
   color: var(--blue);
   background-color: var(--white);
-  position: absolute;
-  right: 60px;
 }
 
 #sign-out:hover,
 #user_name:hover {
   font-weight: bold;
+}
 
+button#back {
+  background-color: white;
+  color: var(--black);
+  padding-left: 0px;
+}
+button#report {
+  background-color: white;
+  color: var(--red);
+}
+
+#buttons_div {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+}
+
+#single_sub_buttons_div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .padding_title_content {
   padding: 32px 0 24px 0;
 }
+
 .padding_elemets {
   /* padding: 0 32px 30px 32px; */
   padding: 30px 32px 30px 32px;
@@ -193,9 +229,36 @@ button#sign-out {
 
 
 /* ALL_SUBMISSONS_PAGE */
-#all_submissions_container {
+#all_submissions_container {}
 
+.single_sub {}
+
+/* SINGLE_SUMBISSION_PAGE */
+#voting div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.single_sub {
 
+#voting img {
+  padding: 5px;
+}
+
+#voteSlider {
+  flex-grow: 2;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--black);
+}
+
+#voteSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 10px;
+  width: 10px;
+  height: 10px;
+  background: var(--blue);
+  cursor: pointer;
 }
