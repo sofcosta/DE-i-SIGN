@@ -47,7 +47,8 @@ function getSubmissions() {
         }
       });
 
-      build_all_submissions_page(submissions);
+      if (typeof build_all_submissions_page === "function") build_all_submissions_page(submissions);
+      if (typeof build_feedNPlay_page === "function") build_feedNPlay_page(submissions);
     });
 
   return [submissions];
