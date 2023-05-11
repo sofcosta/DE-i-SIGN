@@ -92,6 +92,9 @@ p {
   font-size: 14;
 }
 
+.margin_top {
+  margin-top: 50px;
+}
 
 @media (max-width: 480px) {
 
@@ -193,6 +196,7 @@ button#back {
   color: var(--black);
   padding-left: 0px;
 }
+
 button#report {
   background-color: white;
   color: var(--red);
@@ -229,6 +233,21 @@ button#report {
 
 
 /* ALL_SUBMISSONS_PAGE */
+#current_theme_dropdown_btn {
+  position: relative;
+  color: var(--blue);
+}
+
+#arrow {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+}
+
+#current_theme_dropdown_titles {
+  line-height: 4px;
+}
+
 #all_submissions_container {}
 
 .single_sub {}
