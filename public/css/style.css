@@ -136,12 +136,11 @@ p {
   width: 100%;
 }
 
-#current_theme_dropdown_content {
+[id^="current_theme_dropdown_content"] {
   background-color: var(--blue);
   color: var(--white);
   padding: 16px 36px;
 }
-
 /* BUTTONS */
 /* PC */
 .round {
@@ -253,6 +252,16 @@ button#report {
 .single_sub {}
 
 /* SINGLE_SUMBISSION_PAGE */
+@media (min-width: 480px) {
+  #single_submission_container {
+    position: relative;
+  }
+  #single_submission_container img {
+    position: absolute;
+    left: 150%;
+  }
+}
+
 #voting div {
   display: flex;
   align-items: center;
