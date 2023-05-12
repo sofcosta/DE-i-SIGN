@@ -1,3 +1,8 @@
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
 
 .upload_container,
 .upload_desc {
@@ -9,10 +14,10 @@
     gap: 4px;
 }
 
-.container_upload {
-  /*width: 50%;
+.container_upload, .uploadImage_container {
+  width: 50%;
   max-width: 333px;
-  min-width: 200px;*/
+  min-width: 200px;
   width: 300px;
 
   justify-content: center;
@@ -99,8 +104,6 @@ background-color: #e5eefe;
   width: 100%;
   margin-top: 0;
   font-weight: 400;
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 /* Items */
@@ -116,8 +119,10 @@ background-color: #e5eefe;
   /* order: 1; */
 }
 
-.little_note:hover, .delete {
+.little_note:hover, .delete:hover {
   font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ------------- */

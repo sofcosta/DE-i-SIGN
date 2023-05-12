@@ -9,18 +9,26 @@ function build_all_submissions_page(submissions) {
         submission_container.className = "single_sub";
         submission_container.id = sub.submissionId;
 
-        let sub_title = document.createElement('h3');
-        sub_title.appendChild(document.createTextNode(sub.submissionTitle));
-        let sub_desc = document.createElement('p');
-        sub_desc.className = 'submission_description';
-        sub_desc.appendChild(document.createTextNode(sub.submissionDescription));
-        let sub_media = document.createElement('img');
-        sub_media.width = 200;
-        sub_media.src = sub.submissionMedia;
+        // let sub_title = document.createElement('h3');
+        // sub_title.appendChild(document.createTextNode(sub.submissionTitle));
+        // let sub_desc = document.createElement('p');
+        // sub_desc.className = 'submission_description';
+        // sub_desc.appendChild(document.createTextNode(sub.submissionDescription));
+        // let sub_media = document.createElement('img');
+        // sub_media.width = '100%';
+        // sub_media.src = sub.submissionMedia;
+        submission_container.style.backgroundImage = 'url(' + sub.submissionMedia + ')';
+        submission_container.style.backgroundPosition = 'center';
+        console.log(sub.submissionMedia.width)
 
-        submission_container.appendChild(sub_title);
+        // if (sub.submissionMedia.width > sub.submissionMedia.height){
+        //     sub_media.style.width = 'fit-content'
+        // }
+        // submission_container.appendChild(sub_title);
+    
+
         //submission_container.appendChild(sub_desc);
-        submission_container.appendChild(sub_media);
+        // submission_container.appendChild(sub_media);
 
         all_submissions_container.appendChild(submission_container);
     }
