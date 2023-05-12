@@ -63,9 +63,11 @@
             </div>
             <div id="current_theme_dropdown">
               <div id="current_theme_dropdown_btn" onclick="show_current_theme_dropdown()">
-                <h3>Current Theme</h3>
-                <h2>This is the theme title</h2>
-                <div class="arrow_down"></div>
+                <div id="current_theme_dropdown_titles">
+                  <h3>Current Theme</h3>
+                  <h2>This is the theme title</h2>
+                </div>
+                  <div id="arrow" class="arrow_down"></div>
               </div>
               <div id="current_theme_dropdown_content" class="hidden">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -85,6 +87,22 @@
               <button id="show_create_submissions_page_btn " class="nav-link active nav_submit_btn round"
                 onclick="show_create_submissions_page()"><i class="bi bi-house"></i> Submit</button>
               <!-- <button id="sign-out" class="round">Sign Out</button> -->
+            </div>
+            <div id="current_theme_dropdown" class="margin_top">
+              <div id="current_theme_dropdown_btn" onclick="show_current_theme_dropdown()">
+                <div id="current_theme_dropdown_titles">
+                  <h3>Current Theme</h3>
+                  <h2>This is the theme title</h2>
+                </div>
+                  <div id="arrow" class="arrow_down"></div>
+              </div>
+              <div id="current_theme_dropdown_content1" class="hidden">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </div>
             </div>
             <div id="single_sub_buttons_div">
               <div>
@@ -114,7 +132,10 @@
           <!-- * CREATE SUBMISSION PAGE * -->
           <main id="create_submission_page">
             <!-- <button id="sign-out">Sign Out</button> -->
-            <button id="back" onclick=show_all_submissions_page()>BACK</button>
+            <div class="margin_top">
+              <div class="arrow_left"></div>
+              <button id="back" onclick=show_all_submissions_page()>BACK</button>
+            </div>
             <div class="container">
               <!-- <h1 class="title">Submit new project</h1> -->
               <div class="container_upload padding_elemets">
@@ -161,7 +182,7 @@
         <div id="user-signed-out" class="hidden">
           <!-- * WELCOME PAGE * -->
           <main id="welcome_page">
-            <h2>Welcome!</h2>
+            <h2 class="margin_top">Welcome!</h2>
             <p>DE(I)SIGN is a project developed
               to bring together all of the DEI community where you can upload your projects and vote for your favorites!
             </p>
@@ -170,7 +191,7 @@
           <!-- * LOG IN PAGE * -->
           <main id="login_page">
             <div id="firebaseui-spa">
-              <h2>Hello!</h2>
+              <h2 class="margin_top">Hello!</h2>
               <p>Login with your (institutional) email and participate in our contests.</p>
               <div id="firebaseui-container"></div>
             </div>
