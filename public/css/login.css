@@ -1,4 +1,26 @@
-input[type=text], input[type=password] {
+.firebaseui-card-header {
+  display: none;
+}
+
+.firebaseui-textfield.mdl-textfield .firebaseui-label::after {
+  background-color: #00B0FF;
+}
+
+.mdl-button--raised.mdl-button--colored {
+  background: #00B0FF;
+}
+
+.firebaseui-link {
+  color: #00B0FF;
+}
+
+.firebaseui-card-footer {
+  display: none;
+}
+
+/*
+input[type=text],
+input[type=password] {
   width: 100%;
   padding: 12px 12px;
   margin: 8px 0;
@@ -7,12 +29,12 @@ input[type=text], input[type=password] {
   border-radius: 4px solid #10223E;
 }
 
-.container div{
-    margin-bottom: 2%;
+.container div {
+  margin-bottom: 2%;
 }
 
-input{
-    margin-bottom: 100px;
+input {
+  margin-bottom: 100px;
 }
 
 /*como tirar um estilo quando seleciona input?*/
