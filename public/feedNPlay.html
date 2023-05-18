@@ -2,34 +2,81 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FeedNPlay</title>
-    <link rel="manifest" href="manifest.json">
-    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-storage-compat.js"></script>
-    <script src="config.js"></script>
-    <script src="feedNPlay.js"></script>
-    <script src="common.js"></script>
-    <link href="./css/style.css" rel="stylesheet" type="text/css" media="screen" />
-    <script src="https://www.gstatic.com/firebasejs/ui/6.0.2/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.2/firebase-ui-auth.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="./all_submissions/all_submissions.css">
-    <link rel="stylesheet" type="text/css" href="./css/create_submission.css"> -->
-    <link rel="stylesheet" type="text/css" href="./css/feedNPlay.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+  <link rel="stylesheet" href="./css/feednplay.css">
+  <title>FeedNPlay</title>
 </head>
 
 <body>
-    <main></main>
 
-</body>
+  <body>
+    <div class="feednplay-container">
+      <div class="left">
+        <img class="logo" src="assets/logo_horizontal.svg" alt="logo" />
+        <div class="info">
+          <div class="text">
+            <h2>CONTEST THEME</h2>
+            <h1>"This is the theme"</h1>
+            <p>This is a brief description of the contest.</p>
+          </div>
+          <img class="qrcode" src="assets/qrcode.png" alt="QRcode">
+        </div>
+
+      </div>
+      <div class="gallery-container">
+
+      </div>
+    </div>
+
+    <script src="./firebase.js"></script>
+
+    <script type="module">
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js'
+      import { getStorage, ref, uploadBytes, listAll, getDownloadURL, getMetadata } from 'https://www.gstatic.com/firebasejs/9.8.0/firebase-storage.js'
+
+      /*-------------Initalize storage------------*/
+      const app = initializeApp(firebaseConfig);
+      const storage = getStorage(app);
+
+      /*-------------Get storaged images--------------*/
+      let gallery = document.querySelector('.gallery-container');
+
+      function getRandomInt(min, max) {
+        // Returns a random integer between min (inclusive) and max (inclusive)
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function getAllImages(listRef) {
+        listAll(listRef).then((res) => {
+          res.items.forEach((itemRef) => {
+            const downloadUrl = getDownloadURL(itemRef);
+            downloadUrl.then((url) => {
+              // Create an image tag for each url with random size and position
+              let newImg = document.createElement('img');
+              newImg.src = url;
+              //newImg.style.width = `${getRandomInt(50, 100)}px`;
+              newImg.style.width = '100px';
+              newImg.style.objectFit = 'cover';
+              gallery.appendChild(newImg);
+            }).catch((error) => {
+              console.log('Something went wrong');
+            });
+          });
+          res.prefixes.forEach((folderRef) => {
+            getAllImages(folderRef);
+          });
+        }).catch((error) => {
+          console.log('Something went wrong');
+        });
+      }
+      getAllImages(ref(storage, 'media/submissions/'));
+
+    </script>
+  </body>
 
 </html>
