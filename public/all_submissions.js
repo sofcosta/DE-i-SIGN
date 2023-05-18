@@ -1,6 +1,7 @@
 
 function build_all_submissions_page(submissions) {
     let all_submissions_container = document.getElementById('all_submissions_container');
+
     let submission_containers = document.getElementsByClassName('single_sub');
     submission_containers.innerHTML = "";
     all_submissions_container.innerHTML = "";
@@ -8,6 +9,7 @@ function build_all_submissions_page(submissions) {
         let submission_container = document.createElement('button');
         submission_container.className = "single_sub";
         submission_container.id = sub.submissionId;
+        let newImage = document.createElement("img");
 
         // let sub_title = document.createElement('h3');
         // sub_title.appendChild(document.createTextNode(sub.submissionTitle));
@@ -17,8 +19,13 @@ function build_all_submissions_page(submissions) {
         // let sub_media = document.createElement('img');
         // sub_media.width = '100%';
         // sub_media.src = sub.submissionMedia;
-        submission_container.style.backgroundImage = 'url(' + sub.submissionMedia + ')';
-        submission_container.style.backgroundPosition = 'center';
+
+        newImage.className = "single_sub__img";
+newImage.style.objectFit = 'cover'; /* ´´´´´´´´´´´´´´´´´´´´´´*/
+        newImage.src = sub.submissionMedia;
+        submission_container.appendChild(newImage)
+        // submission_container.style.backgroundImage = 'url(' + all_submissions_container + ')';
+        // submission_container.style.backgroundPosition = 'center';
         console.log(sub.submissionMedia.width)
 
         // if (sub.submissionMedia.width > sub.submissionMedia.height){

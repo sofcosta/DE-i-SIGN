@@ -311,9 +311,9 @@ background-repeat: no-repeat;
   justify-content: space-between;
 }
 
-.single_sub img{
+.single_sub img, .single_sub__img{
 width: -webkit-fill-available;
-height: auto;
+/* height: auto; */
 /* aspect-ratio: 1; */
 object-fit: cover;
 }

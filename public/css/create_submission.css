@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+
+
+
+  justify-content: center;
 }
 
 .upload_container,
@@ -16,9 +20,9 @@
 
 .container_upload, .uploadImage_container {
   width: 50%;
-  max-width: 333px;
+  max-width: 632px;
   min-width: 200px;
-  width: 300px;
+  width: 400px;
 
   justify-content: center;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.18);
@@ -27,8 +31,8 @@
 
 .upload_container{
   display: flex;
-
 }
+
 .upload_container input {
     /* width: 303px;
     height: 38px; */
@@ -42,6 +46,7 @@
 .upload_container input:hover, .upload_container input:active {
   border: solid 1px var(--blue);
 }
+
 .upload_container input:hover::placeholder {
   color: var(--blue);
 }
