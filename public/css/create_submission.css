@@ -11,39 +11,44 @@
 .upload_container,
 .upload_desc {
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* padding: 0px; */
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* padding: 0px; */
+  gap: 4px;
 }
 
 .container_upload, .uploadImage_container {
   width: 50%;
   max-width: 632px;
   min-width: 200px;
-  width: 400px;
+  width: 100%; /*400px;*/
 
   justify-content: center;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.18);
-  /* padding: 0 32px 30px 32px; */
+  /* padding: 0 32px 30px 32px; 
+  
+    max-width: 370px;
+  min-width: 200px;
+  width: 100%;*/
 }
 
-.upload_container{
+.upload_container {
   display: flex;
 }
 
 .upload_container input {
-    /* width: 303px;
+  /* width: 303px;
     height: 38px; */
-    width: 100%;
-    /* font-size: 16px; */
-    padding: 8px 12px;
-    /* background-color: rebeccapurple; */
-    border: solid 1px var(--black);
+  width: 100%;
+  /* font-size: 16px; */
+  padding: 8px 12px;
+  /* background-color: rebeccapurple; */
+  border: solid 1px var(--black);
 }
 
-.upload_container input:hover, .upload_container input:active {
+.upload_container input:hover,
+.upload_container input:active {
   border: solid 1px var(--blue);
 }
 
@@ -65,6 +70,7 @@ form {
 .upload_container {
   margin-top: 20px;
 }
+
 .btn-upload {
   position: relative;
   background-color: #ECF3FF;
@@ -79,7 +85,7 @@ form {
 }
 
 .btn-upload:hover {
-background-color: #e5eefe;
+  background-color: #e5eefe;
 }
 
 .btn-upload input[type="file"] {
@@ -105,7 +111,9 @@ background-color: #e5eefe;
   justify-content: space-between;
   width: 100%;
 }
-.little_note, .delete {
+
+.little_note,
+.delete {
   width: 100%;
   margin-top: 0;
   font-weight: 400;
@@ -124,11 +132,19 @@ background-color: #e5eefe;
   /* order: 1; */
 }
 
-.little_note:hover, .delete:hover {
+.little_note:hover,
+.delete:hover {
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+@media (max-width: 480px) {
+  .container_upload {
+    margin: auto;
+  }
+}
+
 
 /* ------------- */
 

@@ -38,6 +38,7 @@ p {
   box-sizing: border-box;
   font-family: DM Sans;
   /* background-color: var(--white); */
+  color: var(--black);
 }
 
 body {
@@ -56,7 +57,7 @@ body {
   max-width: 1080px;
   margin: 0 auto;
   position: relative;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .clearfix {
@@ -121,19 +122,6 @@ p {
 
 .margin_top {
   margin-top: 50px;
-}
-
-@media (max-width: 300px) {
-
-  #photo-container,
-  #photo {
-    height: 40px;
-    width: 40px;
-  }
-
-  #container {
-    margin: auto 30px;
-  }
 }
 
 .arrow_down {
@@ -295,15 +283,6 @@ background-repeat: no-repeat;
 }
 
 /* SINGLE_SUMBISSION_PAGE */
-@media (min-width: 480px) {
-  #single_submission_container {
-    position: relative;
-  }
-  #single_submission_container img {
-    position: absolute;
-    left: 150%;
-  }
-}
 
 #voting div {
   display: flex;
@@ -339,4 +318,30 @@ object-fit: cover;
   height: 10px;
   background: var(--blue);
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  #photo-container,
+  #photo {
+    height: 40px;
+    width: 40px;
+  }
+
+  #container {
+    margin: auto;
+  }
+
+  #all_submissions_container * {
+    width: 100%;
+  }
+}
+
+@media (min-width: 480px) {
+  #single_submission_container {
+    position: relative;
+  }
+  #single_submission_container img {
+    position: absolute;
+    left: 150%;
+  }
 }
