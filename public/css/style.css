@@ -297,7 +297,9 @@ background-repeat: no-repeat;
 #voting img {
   padding: 5px;
 }
-
+#voteSubmit, #create_submission_button {
+  background-color: var(--blue);
+}
 #voteSlider {
   flex-grow: 2;
   -webkit-appearance: none;
@@ -317,7 +319,7 @@ background-repeat: no-repeat;
   cursor: pointer;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 599px) {
   #photo-container,
   #photo {
     height: 40px;
@@ -333,7 +335,7 @@ background-repeat: no-repeat;
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 600px) {
   #single_submission_container {
     position: relative;
   }
@@ -342,3 +344,8 @@ background-repeat: no-repeat;
     left: 150%;
   }
 }
+/* @media (min-width: 1800px) {
+  
+ } */
+
+
