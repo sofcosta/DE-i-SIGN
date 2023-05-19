@@ -21,7 +21,8 @@ function build_all_submissions_page(submissions) {
         // sub_media.src = sub.submissionMedia;
 
         newImage.className = "single_sub__img";
-newImage.style.objectFit = 'cover'; /* ´´´´´´´´´´´´´´´´´´´´´´*/
+        //newImage.style.objectFit = 'cover'; 
+/* ´´´´´´´´´´´´´´´´´´´´´´*/
         newImage.src = sub.submissionMedia;
         submission_container.appendChild(newImage)
         // submission_container.style.backgroundImage = 'url(' + all_submissions_container + ')';
