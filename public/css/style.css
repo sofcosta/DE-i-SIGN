@@ -176,6 +176,14 @@ button {
   border-radius: 6px;
 }
 
+#login_register_btn, #create_submission_button {
+    padding: 8px 16px;
+}
+
+#login_register_btn {
+  background-color: var(--blue);
+}
+
 .nav_submit_btn {
   background-color: var(--white);
   padding: 8px 32px;

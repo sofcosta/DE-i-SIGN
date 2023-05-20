@@ -69,7 +69,7 @@
                   <h3>Current Theme</h3>
                   <h2>This is the theme title</h2>
                 </div>
-                  <div id="arrow" class="arrow_down"></div>
+                <div id="arrow" class="arrow_down"></div>
               </div>
               <div id="current_theme_dropdown_content" class="hidden">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -96,7 +96,7 @@
                   <h3>Current Theme</h3>
                   <h2>This is the theme title</h2>
                 </div>
-                  <div id="arrow" class="arrow_down"></div>
+                <div id="arrow" class="arrow_down"></div>
               </div>
               <div id="current_theme_dropdown_content1" class="hidden">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -133,49 +133,80 @@
           </main>
           <!-- * CREATE SUBMISSION PAGE * -->
           <main id="create_submission_page">
+            <!-- nav -->
+            <div id="buttons_div">
+              <button id="show_create_submissions_page_btn " class="nav-link active nav_submit_btn round"
+                onclick="show_create_submissions_page()"><i class="bi bi-house"></i> Submit</button>
+              <button id="sign-out" class="round">Sign Out</button>
+            </div>
+            <div id="current_theme_dropdown" class="margin_top">
+              <div id="current_theme_dropdown_btn" onclick="show_current_theme_dropdown()">
+                <div id="current_theme_dropdown_titles">
+                  <h3>Current Theme</h3>
+                  <h2>This is the theme title</h2>
+                </div>
+                <div id="arrow" class="arrow_down"></div>
+              </div>
+              <div id="current_theme_dropdown_content1" class="hidden">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </div>
+            </div>
+            <!-- --------------------------- -->
             <!-- <button id="sign-out">Sign Out</button> -->
+            <div class="upload__Max__container"></div>
             <div class="margin_top">
               <div class="arrow_left"></div>
               <button id="back" onclick=show_all_submissions_page()>BACK</button>
             </div>
             <div class="container">
-              <!-- <h1 class="title">Submit new project</h1> -->
-              <div class="container_upload padding_elemets">
-                <h1 class="title">Submit new project</h1>
-                <form action="" method="post">
-                  <div class="upload_container"><!-- padding_title_content -->
-                    <button class="round btn-upload">
-                      <img style="height:14px; padding-right: .2em;" src="./assets/cloud.svg" alt="upload_file">
-                      <input type="file" name="" id="submissionFile_input" class="upload_file round">
-                      <span> Select file</span>
-                    </button>
-                    <div class="little_notes_container" hidden>
-                      <h6 class="little_note delete" style="margin-top: 0;">Delete</h6>
-                      <h6 class="little_note" style="margin-top: 0;text-align: right;">File uploaded</h6>
+              <div class="upload__Max__container">
+                <!-- <h1 class="title">Submit new project</h1> -->
+                <div class="container_upload padding_elemets">
+                  <h1 class="title">Submit new project</h1>
+                  <form action="" method="post">
+                    <div class="upload_container"><!-- padding_title_content -->
+                      <button class="round btn-upload">
+                        <img style="height:14px; padding-right: .2em;" src="./assets/cloud.svg" alt="upload_file">
+                        <input type="file" name="" id="submissionFile_input" class="upload_file round">
+                        <span> Select file</span>
+                      </button>
+                      <div class="little_notes_container" hidden>
+                        <h6 class="little_note delete" style="margin-top: 0;">Delete</h6>
+                        <h6 class="little_note" style="margin-top: 0;text-align: right;">File uploaded</h6>
+                      </div>
                     </div>
-                  </div>
-
-                  <div class="upload_container upload_title"> <!-- padding_title_content -->
-                    <label class="upload_title">Project Title</label>
-                    <input type="text" name="" id="submissionTitle_input" placeholder="Echoes Of Memory">
-                  </div>
-
-                  <div class="upload_container upload_desc"> <!-- padding_title_content -->
-                    <label class="upload_desc">Description</label>
-                    <input type="text" name="" id="submissionDescription_input" placeholder="This project portrays..."">
-                  </div>
-
-                  <div class=" upload_container upload_theme"> <!-- padding_title_content -->
-                    <label class="upload_theme">Theme</label>
-                    <input type="text" name="" id="submissionTheme_input" placeholder="Memories">
-                    <!-- <label class="upload_file">Attatch Project</label> -->
-                  </div>
-                  <button id="create_submission_button" type="button" class="round margin32">Submit</button>
-                </form>
-                <div class="uploadImage_container">
-                  <img src="" alt="" class="uploadImage">
+  
+                    <div class="upload_container upload_title"> <!-- padding_title_content -->
+                      <label class="upload_title">Project Title</label>
+                      <input type="text" name="" id="submissionTitle_input" placeholder="Echoes Of Memory">
+                    </div>
+  
+                    <div class="upload_container upload_desc"> <!-- padding_title_content -->
+                      <label class="upload_desc">Description</label>
+                      <input type="text" name="" id="submissionDescription_input" placeholder="This project portrays..."">
+                    </div>
+  
+                    <div class=" upload_container upload_theme"> <!-- padding_title_content -->
+                      <label class="upload_theme">Theme</label>
+                      <input type="text" name="" id="submissionTheme_input" placeholder="Memories">
+                      <!-- <label class="upload_file">Attatch Project</label> -->
+                    </div>
+                    <button id="create_submission_button" type="button" class="round margin32">Submit</button>
+                  </form>
+                
+                </div>
+                <div class="uploadImage_container hidden padding_elemets">
+                  <h1 class="title">Uploaded file data</h1>
+                  <h4 class="uploadFileName">File name </h4>
+                  <p class="fileNameP">k</p>
+                  <img src="" alt="" class="uploadedImage_img">
                 </div>
               </div>
+            
             </div>
 
           </main>
@@ -233,6 +264,7 @@
   </div>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="app.js"></script>
+  <script src="getFile_upload_state.js"></script>
 </body>
 
 </html>
