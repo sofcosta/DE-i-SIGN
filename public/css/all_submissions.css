@@ -20,7 +20,44 @@
     width: 100%;
     object-fit: cover;
     padding: 0;
+}
 
+/*
+.background{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.5);
+
+}*/
+
+.popup{
+    width: 400px;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+}
+
+.btn{
+    width: 90%;
+    padding: 6px 0;
+}
+
+.open-popup{
+    visibility: visible;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
 
 @media (max-width: 599px) {
@@ -30,6 +67,12 @@
 
     #all_submissions_container .single_sub {
         width: 100%;
+    }
+
+    .popup{
+        width: 350px;
+        transform: translate(-50%, -50%);
+        overflow-y: hidden ;
     }
 }
 

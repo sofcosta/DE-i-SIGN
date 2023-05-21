@@ -111,7 +111,6 @@
                 <div class="arrow_left"></div>
                 <button id="back" onclick=show_all_submissions_page()>BACK</button>
               </div>
-              <button id="report">REPORT</button>
             </div>
             <div style="width: 350px;">
               <div id="single_submission_container">
@@ -128,6 +127,24 @@
                   <p>ADORO</p>
                 </div>
                 <button id="voteSubmit">Vote</button>
+              </div>
+
+              <div class="container_report">
+                <button id="report" onclick="openPopup()">REPORT</button>
+                <div class="background">
+                  <div class="popup" id="popup" style="border:1px solid red;">
+                    <h2>Confirm Report</h2>
+                    <button class="btn" id="confirm" onclick="openSuccess()" style="background:red; border:1px solid red;">Confirm</button>
+                    <button class="btn" id="cancel" onclick="closePopup()"
+                      style="border:1px solid red; color:red; background: none;">Cancel</button>
+                  </div>
+                  <div class="popup" id="popup_success" style="border:1px solid #00B0FF;">
+                    <h2>Work successfully reported</h2>
+                    <p>Our team is going to be review this work.</p>
+                    <p>Thank you for helping us to keep this community safe!</p>
+                    <button class="btn" id="close" onclick="closePopup()" style="background:#00B0FF;"> <a href="index.html">Go back</a></button>
+                  </div>
+                </div>
               </div>
             </div>
           </main>
@@ -179,17 +196,18 @@
                         <h6 class="little_note" style="margin-top: 0;text-align: right;">File uploaded</h6>
                       </div>
                     </div>
-  
+
                     <div class="upload_container upload_title"> <!-- padding_title_content -->
                       <label class="upload_title">Project Title</label>
                       <input type="text" name="" id="submissionTitle_input" placeholder="Echoes Of Memory">
                     </div>
-  
+
                     <div class="upload_container upload_desc"> <!-- padding_title_content -->
                       <label class="upload_desc">Description</label>
-                      <input type="text" name="" id="submissionDescription_input" placeholder="This project portrays..."">
+                      <input type="text" name="" id="submissionDescription_input"
+                        placeholder="This project portrays...">
                     </div>
-  
+
                     <div class=" upload_container upload_theme"> <!-- padding_title_content -->
                       <label class="upload_theme">Theme</label>
                       <input type="text" name="" id="submissionTheme_input" placeholder="Memories">
@@ -197,7 +215,7 @@
                     </div>
                     <button id="create_submission_button" type="button" class="round margin32">Submit</button>
                   </form>
-                
+
                 </div>
                 <div class="uploadImage_container hidden padding_elemets">
                   <h1 class="title">Uploaded file data</h1>
@@ -206,7 +224,7 @@
                   <img src="" alt="" class="uploadedImage_img">
                 </div>
               </div>
-            
+
             </div>
 
           </main>
@@ -265,6 +283,22 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="app.js"></script>
   <script src="getFile_upload_state.js"></script>
+  <script>
+    let popup = document.getElementById("popup");
+    let popup_success = document.getElementById("popup_success");
+
+    function openPopup() {
+      popup.classList.add("open-popup");
+    }
+
+    function closePopup() {
+      popup.classList.remove("open-popup");
+    }
+
+    function openSuccess() {
+      popup_success.classList.add("open-popup");
+    }
+  </script>
 </body>
 
 </html>
