@@ -38,6 +38,7 @@ p {
   box-sizing: border-box;
   font-family: DM Sans;
   /* background-color: var(--white); */
+  color: var(--black);
 }
 
 body {
@@ -56,7 +57,7 @@ body {
   max-width: 1080px;
   margin: 0 auto;
   position: relative;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .clearfix {
@@ -123,19 +124,6 @@ p {
   margin-top: 50px;
 }
 
-@media (max-width: 300px) {
-
-  #photo-container,
-  #photo {
-    height: 40px;
-    width: 40px;
-  }
-
-  #container {
-    margin: auto 30px;
-  }
-}
-
 .arrow_down {
   text-align: right;
   border: solid var(--blue);
@@ -174,10 +162,10 @@ p {
 
 
 button {
-  background-color: var(--blue);
+ /* background-color: var(--blue);*/
   border: none;
   color: var(--white);
-  padding: 8px 16px;
+  /*padding: 8px 16px;*/
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -186,6 +174,14 @@ button {
   cursor: pointer;
   gap: 170px;
   border-radius: 6px;
+}
+
+#login_register_btn, #create_submission_button {
+    padding: 8px 16px;
+}
+
+#login_register_btn {
+  background-color: var(--blue);
 }
 
 .nav_submit_btn {
@@ -287,23 +283,16 @@ margin: 0;
   flex-wrap: wrap;
 }
 
-#all_submissions_container *{
+/*#all_submissions_container *{ */
+  /*#all_submissions_container .single_sub{
+
 width: calc(100% / 4 - 16px);
 aspect-ratio: 1/1.5;
 background-size: contain;
 background-repeat: no-repeat;
-}
+}*/
 
 /* SINGLE_SUMBISSION_PAGE */
-@media (min-width: 480px) {
-  #single_submission_container {
-    position: relative;
-  }
-  #single_submission_container img {
-    position: absolute;
-    left: 150%;
-  }
-}
 
 #voting div {
   display: flex;
@@ -311,17 +300,14 @@ background-repeat: no-repeat;
   justify-content: space-between;
 }
 
-.single_sub img{
-width: -webkit-fill-available;
-height: auto;
-/* aspect-ratio: 1; */
-object-fit: cover;
-}
+
 
 #voting img {
   padding: 5px;
 }
-
+#voteSubmit, #create_submission_button {
+  background-color: var(--blue);
+}
 #voteSlider {
   flex-grow: 2;
   -webkit-appearance: none;
@@ -340,3 +326,34 @@ object-fit: cover;
   background: var(--blue);
   cursor: pointer;
 }
+
+@media (max-width: 599px) {
+  #photo-container,
+  #photo {
+    height: 40px;
+    width: 40px;
+  }
+
+  #container {
+    margin: auto;
+  }
+
+  #all_submissions_container  {
+    width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  #single_submission_container {
+    position: relative;
+  }
+  #single_submission_container img {
+    position: absolute;
+    left: 150%;
+  }
+}
+/* @media (min-width: 1800px) {
+  
+ } */
+
+

@@ -1,4 +1,4 @@
-let create_submission_button = document.getElementById("create_submission_button");
+//let create_submission_button = document.getElementById("create_submission_button");
 
 create_submission_button.onclick = function() {
     let submission_title = document.getElementById('submissionTitle_input').value;

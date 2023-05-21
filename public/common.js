@@ -78,9 +78,9 @@ function parseQueryString(queryString) {
 
 
 function show_current_theme_dropdown() {
-  console.log("here");
   document.getElementById('current_theme_dropdown_content').classList.toggle('hidden');
   document.getElementById('current_theme_dropdown_content1').classList.toggle('hidden');
+  document.getElementById('current_theme_dropdown_content2').classList.toggle('hidden');
 }
 
 
